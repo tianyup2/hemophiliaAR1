@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#SBATCH --job-name=WrongPleteaurho5n20    ## Name of the job.
+#SBATCH -A your_account    ## account to charge 
+#SBATCH -p standard          ## partition/queue name
+#SBATCH --nodes=1            ## (-N) number of nodes to use
+#SBATCH --ntasks=1          ## (-n) number of tasks to launch
+#SBATCH --cpus-per-task=1    ## number of cores the job needs
+#SBATCH -o hemophiliaAR1.out
+
+module load R/4.0.4
+Rscript hemophiliaAR1WrongAlt.R $1
+
+
+
+
